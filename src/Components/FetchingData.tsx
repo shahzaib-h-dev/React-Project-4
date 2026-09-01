@@ -5,13 +5,13 @@ export function FetchingData(props:any){
     const [count, setCount] = React.useState(0)
 
 
-   React.useEffect(function(){
+   React.useEffect(() =>{
 
        fetch("https://swapi.dev/api/people/1")
          .then(res => res.json())
          .then(data => setStarWarsData(data)) 
 
-   },   [count ]) 
+   },   []) //Changing value in dependency = requests function to run one more time. 
 
     return(
         <div>
