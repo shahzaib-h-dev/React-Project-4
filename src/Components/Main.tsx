@@ -11,6 +11,15 @@ export function Main(){
          
     })
 
+    function handleChange(event: any){
+       const {value} = event.currentTarget 
+       setMeme((prevMeme: any) => ({
+        ...prevMeme,
+        topText: value
+       }));    
+      
+    }
+
     return(
         <main className="main-container">
             <div className="form">
@@ -21,6 +30,7 @@ export function Main(){
                         placeholder="One does not simply"
                         name="topText"
                         className="form-input"
+                        onChange={handleChange}
                     />
                 </label>
                 
@@ -30,6 +40,7 @@ export function Main(){
                         placeholder="Walk into Mordor"
                         name="bottomText"
                         className="form-input"
+                        
                     />
                 </label>
                 
