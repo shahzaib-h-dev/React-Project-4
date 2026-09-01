@@ -3,13 +3,15 @@ import "./index.css";
 
 import logo from "./logo.svg";
 import reactLogo from "./react.svg";
-import { Project } from "./Components/pROJECT";
+import { Project } from "./Components/Project";
+import { FetchingData } from "./Components/FetchingData";
+
 
 export function App() {
   return (
     <div>
-    <Project/>
-    
+      {/* <Project/> */}
+      <FetchingData/>
     </div>
   );
 }
