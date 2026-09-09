@@ -68,7 +68,7 @@ export function Main(){
                     />
                 </label>
                 
-                <button className="form-button" onClick={getMemeImage}>Get a new meme image 🖼️</button>
+                <button className="form-button" onClick={getMemeImage}>Get a new Meme image 🖼️</button>
             </div>
             
             <div className="meme">
