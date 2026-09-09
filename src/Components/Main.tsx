@@ -1,5 +1,5 @@
 import defaultMeme from "../assests/MainMeme.jpg"
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 export function Main(){
     
@@ -10,6 +10,17 @@ export function Main(){
         imageUrl:defaultMeme
          
     })
+
+    const [allMemes, setAllmemes] = useState([])
+
+    useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+     .then(res => res.json())
+     .then(data=> setAllmemes(data.data.memes))
+         
+    },
+    
+    [])
 
     function handleChange(event: any){
        const {value, name} = event.currentTarget 

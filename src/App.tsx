@@ -10,8 +10,8 @@ import { FetchingData } from "./Components/FetchingData";
 export function App() {
   return (
     <div>
-      {/* <Project/> */}
-      <FetchingData/>
+      <Project/> 
+      {/* <FetchingData/> */}
     </div>
   );
 }
